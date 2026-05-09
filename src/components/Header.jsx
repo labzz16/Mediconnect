@@ -126,6 +126,16 @@ export default function Header() {
             <ul className="flex flex-col lg:flex-row space-y-2 lg:space-y-0 lg:space-x-6 font-medium text-gray-700 dark:text-gray-200">
               <li>
                 <NavLink
+                  to="/"
+                  className={({ isActive }) =>
+                    `${isActive ? 'text-blue-700 dark:text-blue-300' : 'hover:text-blue-700 dark:hover:text-blue-300'} transition`
+                  }
+                >
+                  Home
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
                   to="/book-appointment"
                   className={({ isActive }) =>
                     `${isActive ? 'text-blue-700 dark:text-blue-300' : 'hover:text-blue-700 dark:hover:text-blue-300'} transition`
